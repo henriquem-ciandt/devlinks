@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --text-color-light-mode: oklch(0% 0 0);
+  --stroke-color-light-mode: oklch(50% 0 0);
+  --surface-color-light-mode: oklch(5% 0 0);
+  --surface-color-light-mode-hover: oklch(2% 0 0);
+  --highlight-color-light-mode: oklch(10% 0 0);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --text-md: 16px;
+  --text-md--line-height: 24px;  
+  --text-sm: 14px;
+  --text-sm--line-height: 24px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --text-color-dark-mode: oklch(100% 0.00011 271.152);
+    --stroke-color-dark-mode: oklch(50% 0.00011 271.152);
+    --surface-color-dark-mode: oklch(10% 0.00011 271.152);
+    --surface-color-dark-mode-hover: oklch(5% 0.00011 271.152);
+    --highlight-color-dark-mode: oklch(20% 0.00011 271.152);
+  }
+}
+
+@layer utilities {
+  .text-md {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  .text-sm { 
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans); 
 }
