@@ -1,12 +1,19 @@
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="p-10 space-y-4 relative min-h-screen w-full bg-cover sm:bg-[url(/bg-desktop-light.svg)] sm:dark:bg-[url(/bg-desktop.svg)] bg-[url(/bg-mobile-light.svg)] dark:bg-[url(/bg-mobile.svg)]">
-      <p className="text-md">
-        This is the "text-md" specification. (Medium weight)
-      </p>
-      <p className="text-sm">
-        This is the "text-sm" specification. (Regular weight)
-      </p>
+      {/* Content Container */}
+      <div className="relative flex flex-col items-center justify-start min-h-screen px-1 py-3.5 md:py-2 md:pt-3.5">
+        {/* Profile */}
+        <div className="flex justify-center items-center flex-col min-w-90 sm:min-w-147 min-h-48 gap-2 py-6 px-31 sm:p-6">
+          <Avatar className="size-28 bg-white selection:border-stroke-color-light-mode selection:dark:border-stroke-color-dark-mode">
+            <AvatarImage src={"/avatar.jpeg"} />
+          </Avatar>
+          <Link className="w-auto min-w-20 min-h-6 text-md sm:text-sm" href={"https://github.com/henriquem-ciandt"}>@henriquem-ciandt</Link>
+        </div>
+      </div>
     </div>
   );
 }
