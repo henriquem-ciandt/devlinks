@@ -1,6 +1,7 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+import { Github, Instagram, Linkedin, Youtube } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -23,6 +24,17 @@ export default function Home() {
           <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Baixe meu e-book</Button>
           <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Veja meu portfólio</Button>
           <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Conheça meu curso</Button>
+        </div>
+        {/* Social Links */}
+        <div className="flex w-min-90 sm:w-min-147 h-min-22 justify-center gap-4 p-6 space-x-4">
+          <Github className="size-10" />
+          <Instagram className="size-10" />
+          <Youtube className="size-10" />
+          <Linkedin className="size-10" />
+        </div>
+        {/* Footer */}
+        <div className="w-full sm:w-min-147 w-min-90 h-fit h-min-18 gap-2 p-6 justify-items-center">
+          <p>Feito com ♥ pela <Link className="underline" href={"https://www.rocketseat.com.br/"}>Rocketseat</Link></p>
         </div>
       </div>
     </div>
