@@ -1,4 +1,5 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
 
 export default function Home() {
@@ -8,11 +9,13 @@ export default function Home() {
       <div className="relative flex flex-col items-center justify-start min-h-screen px-1 py-3.5 md:py-2 md:pt-3.5">
         {/* Profile */}
         <div className="flex justify-center items-center flex-col min-w-90 sm:min-w-147 min-h-48 gap-2 py-6 px-31 sm:p-6">
-          <Avatar className="size-28 bg-white selection:border-stroke-color-light-mode selection:dark:border-stroke-color-dark-mode">
+          <Avatar className="size-28 bg-white border-2 border-stroke">
             <AvatarImage src={"/avatar.jpeg"} />
           </Avatar>
-          <Link className="w-auto min-w-20 min-h-6 text-md sm:text-sm" href={"https://github.com/henriquem-ciandt"}>@henriquem-ciandt</Link>
+          <Link className="w-auto min-w-20 min-h-6 text-4 sm:text-3.5/24 text-l/24 font-medium sm:font-normal text-black dark:text-white" href={"https://github.com/henriquem-ciandt"}>@henriquem-ciandt</Link>
         </div>
+        {/* Switch */}
+        <Switch />
       </div>
     </div>
   );

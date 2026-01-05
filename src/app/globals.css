@@ -1,65 +1,47 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --text-color-light-mode: oklch(0% 0 0);
-  --stroke-color-light-mode: oklch(50% 0 0);
-  --surface-color-light-mode: oklch(5% 0 0);
-  --surface-color-light-mode-hover: oklch(2% 0 0);
-  --highlight-color-light-mode: oklch(10% 0 0);
-  --text-color: var(--text-color-light-mode)
-}
+  --stroke-color-light-mode: oklch(0% 0 0 / 0.5);
+  --surface-color-light-mode: oklch(0% 0 0 / 0.05);
+  --surface-color-light-mode-hover: oklch(0% 0 0 / 0.02);
+  --highlight-color-light-mode: oklch(0% 0 0 / 0.1);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-text: var(--text-color);
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --text-md: 16px;
-  --text-md--line-height: 24px;  
-  --text-sm: 14px;
-  --text-sm--line-height: 24px;
+  --stroke: var(--stroke-color-light-mode);
+  --surface: var(--surface-color-light-mode);
+  --surface-hover: var(--surface-color-light-mode-hover);
+  --highlight: var(--highlight-color-light-mode);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color-dark-mode: oklch(100% 0.00011 271.152);
-    --stroke-color-dark-mode: oklch(50% 0.00011 271.152);
-    --surface-color-dark-mode: oklch(10% 0.00011 271.152);
-    --surface-color-dark-mode-hover: oklch(5% 0.00011 271.152);
-    --highlight-color-dark-mode: oklch(20% 0.00011 271.152);
-    --text-color: var(--text-color-dark-mode)
+    --stroke-color-dark-mode: oklch(100% 0.00011 271.152 / 0.5);
+    --surface-color-dark-mode: oklch(100% 0.00011 271.152 / 0.1);
+    --surface-color-dark-mode-hover: oklch(100% 0.00011 271.152 / 0.05);
+    --highlight-color-dark-mode: oklch(100% 0.00011 271.152 / 0.2);
+
+    --stroke: var(--stroke-color-dark-mode);
+    --surface: var(--surface-color-dark-mode);
+    --surface-hover: var(--surface-color-dark-mode-hover);
+    --highlight: var(--highlight-color-dark-mode);
   }
 }
 
 .dark {
-  --text-color-dark-mode: oklch(100% 0.00011 271.152);
-  --stroke-color-dark-mode: oklch(50% 0.00011 271.152);
-  --surface-color-dark-mode: oklch(10% 0.00011 271.152);
-  --surface-color-dark-mode-hover: oklch(5% 0.00011 271.152);
-  --highlight-color-dark-mode: oklch(20% 0.00011 271.152);
-  --text-color: var(--text-color-dark-mode)
+  --stroke-color-dark-mode: oklch(100% 0.00011 271.152 / 0.5);
+  --surface-color-dark-mode: oklch(100% 0.00011 271.152 / 0.1);
+  --surface-color-dark-mode-hover: oklch(100% 0.00011 271.152 / 0.05);
+  --highlight-color-dark-mode: oklch(100% 0.00011 271.152 / 0.2);
+
+  --stroke: var(--stroke-color-dark-mode);
+  --surface: var(--surface-color-dark-mode);
+  --surface-hover: var(--surface-color-dark-mode-hover);
+  --highlight: var(--highlight-color-dark-mode);
 }
 
-@layer utilities {
-  .text-md {
-    font-family: var(--font-sans);
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    color: var(--text-color);
-  }
-
-  .text-sm { 
-    font-family: var(--font-sans);
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
-    color: var(--text-color);
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans); 
+@theme inline {
+  --color-stroke: var(--stroke);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-highlight: var(--highlight);
 }
