@@ -1,4 +1,5 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
 
@@ -16,6 +17,13 @@ export default function Home() {
         </div>
         {/* Switch */}
         <Switch />
+        {/* Links */}
+        <div className="flex-col w-min-90 sm:w-min-147 h-min-80 justify-start gap-4 p-6 space-y-4">
+          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Inscreva-se no NLW</Button>
+          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Baixe meu e-book</Button>
+          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Veja meu portfólio</Button>
+          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Conheça meu curso</Button>
+        </div>
       </div>
     </div>
   );
