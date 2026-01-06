@@ -11,8 +11,8 @@ export default function Home() {
       <div className="relative flex flex-col items-center justify-start min-h-screen px-1 py-3.5 md:py-2 md:pt-3.5">
         {/* Profile */}
         <div className="flex justify-center items-center flex-col min-w-90 sm:min-w-147 min-h-48 gap-2 py-6 px-31 sm:p-6">
-          <Avatar className="size-28 bg-white border-2 border-stroke">
-            <AvatarImage src={"/avatar.jpeg"} />
+          <Avatar className="size-28 bg-white border-2 border-stroke dark:border-stroke-ondark">
+            <AvatarImage src={"https://avatars.githubusercontent.com/u/89932516?v=4"} />
           </Avatar>
           <Link className="w-auto min-w-20 min-h-6 text-4 sm:text-3.5/24 text-l/24 font-medium sm:font-normal text-black dark:text-white" href={"https://github.com/henriquem-ciandt"}>@henriquem-ciandt</Link>
         </div>
@@ -20,17 +20,30 @@ export default function Home() {
         <Switch />
         {/* Links */}
         <div className="flex-col w-min-90 sm:w-min-147 h-min-80 justify-start gap-4 p-6 space-y-4">
-          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Inscreva-se no NLW</Button>
-          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Baixe meu e-book</Button>
-          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Veja meu portfólio</Button>
-          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface hover:bg-surface-hover border border-stroke">Conheça meu curso</Button>
+          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface dark:bg-surface-ondark backdrop-blur-md hover:bg-surface-hover dark:hover:bg-surface-ondark-hover border hover:border-2 border-stroke dark:border-stroke-ondark">Inscreva-se no NLW</Button>
+          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface dark:bg-surface-ondark backdrop-blur-md hover:bg-surface-hover dark:hover:bg-surface-ondark-hover border hover:border-2 border-stroke dark:border-stroke-ondark">Baixe meu e-book</Button>
+          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface dark:bg-surface-ondark backdrop-blur-md hover:bg-surface-hover dark:hover:bg-surface-ondark-hover border hover:border-2 border-stroke dark:border-stroke-ondark">Veja meu portfólio</Button>
+          <Button className="w-full h-min-14 gap-2 px-6 py-4 justify-center rounded-b-md bg-surface dark:bg-surface-ondark backdrop-blur-md hover:bg-surface-hover dark:hover:bg-surface-ondark-hover border hover:border-2 border-stroke dark:border-stroke-ondark">Conheça meu curso</Button>
         </div>
         {/* Social Links */}
         <div className="flex w-min-90 sm:w-min-147 h-min-22 justify-center gap-4 p-6 space-x-4">
-          <Github className="size-10" />
-          <Instagram className="size-10" />
-          <Youtube className="size-10" />
-          <Linkedin className="size-10" />
+
+          <div className="flex items-center justify-center size-10 rounded-full hover:outline-4 hover:bg-highlight dark:hover:bg-highlight-ondark hover:outline-highlight dark:hover:outline-highlight-ondark">
+              <Github className="size-6" />
+          </div>
+
+          <div className="flex items-center justify-center size-10 rounded-full hover:outline-4 hover:bg-highlight dark:hover:bg-highlight-ondark hover:outline-highlight dark:hover:outline-highlight-ondark">
+            <Instagram className="size-6" />
+          </div>
+
+          <div className="flex items-center justify-center size-10 rounded-full hover:outline-4 hover:bg-highlight dark:hover:bg-highlight-ondark hover:outline-highlight dark:hover:outline-highlight-ondark">
+            <Youtube className="size-6" />
+          </div>
+
+          <div className="flex items-center justify-center size-10 rounded-full hover:outline-4 hover:bg-highlight dark:hover:bg-highlight-ondark hover:outline-highlight dark:hover:outline-highlight-ondark">
+            <Linkedin className="size-6" />
+          </div>
+          
         </div>
         {/* Footer */}
         <div className="w-full sm:w-min-147 w-min-90 h-fit h-min-18 gap-2 p-6 justify-items-center">
